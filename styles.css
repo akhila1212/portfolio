@@ -1,0 +1,335 @@
+/* Color Variables */
+:root {
+    --bg-color: #e9e2e9;
+    --nav-color: #252422;
+    --text-color: black;
+    --accent-color: #0f0e0d;
+    --btn-hover: #0f0e0d;
+    --card-bg: #ffffff;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #0f0e0d;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: rgb(236, 236, 236);
+    text-decoration: underline;
+}
+nav a.active {
+  border-bottom: 2px solid white;
+  padding-bottom: 4px;
+}
+
+
+/* Main Section Split Layout */
+.main-section {
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+
+/* Left Side (Profile) */
+.left-pane, .right-pane {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.left-pane {
+    background-color: white;
+}
+
+.right-pane {
+    background-color: #e0cbe5;
+}
+
+/* Profile Image */
+.profile-photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 2px solid var(--text-color);
+}
+
+/* Profile Name */
+.profile-name {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 10px;
+  text-shadow: 1px 1px #ccc;
+}
+
+/* About Section */
+.about-me h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-me p {
+    max-width: 500px;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  width: 100px;
+  justify-content: center;
+}
+
+
+.btn:hover {
+    background-color: var(--btn-hover);
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+    .main-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .about-me p {
+        padding: 0 20px;
+    }
+
+    .left-pane, .right-pane {
+        padding: 30px 20px;
+    }
+}
+/* Projects Section */
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #120f14;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #c69cd1;
+    text-align: left;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Image */
+.project-image {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    align-self: center;
+}
+
+/* Project Content */
+.project-content {
+    flex: 1;
+}
+
+.project h2 {
+    color: black;
+    text-align: left;
+}
+
+/* Buttons for Project Links */
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.project-links .btn {
+    background-color: rgb(48, 47, 47);
+    color: white;
+    padding: 10px 18px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+.project-links .btn:hover {
+    background-color: var(--btn-hover);
+    cursor: pointer;
+}
+.btn {
+  border-radius: 5px;
+}
+/* Responsive Project Styling */
+@media screen and (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .project-image {
+        width: 100%;
+        max-width: 250px;
+        margin-bottom: 15px;
+    }
+
+    .project-content {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+/* Contact Section */
+.contact-section {
+    background-color: #d5a5da;
+    padding: 50px 20px;
+    border-radius: 16px;
+    max-width: 800px;
+    margin: 50px auto;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #120f14;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #2d2d2d;
+}
+
+.contact-section p {
+    font-size: 18px;
+    color: #0a0909;
+    margin-bottom: 20px;
+}
+
+/* Contact Cards */
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual Card */
+.contact-card {
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #222;
+}
+
+.contact-card i {
+    font-size: 18px;
+}
+
+/* Contact Links */
+.contact-card a {
+    color: #4b0082;
+    font-size: 16px;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Contact Cards */
+@media screen and (max-width: 768px) {
+    .contact-card {
+        width: 100%;
+    }
+}
+
